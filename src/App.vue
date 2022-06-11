@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from "@/components/HelloWorld.vue";
+import { useI18n } from "vue-i18n";
 import { RouterLink, RouterView } from "vue-router";
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -14,7 +17,7 @@ import { RouterLink, RouterView } from "vue-router";
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld :msg="t('message')" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
