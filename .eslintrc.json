@@ -8,5 +8,14 @@
   ],
   "env": {
     "vue/setup-compiler-macros": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
