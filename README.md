@@ -5,7 +5,7 @@ This template is based on the official vue starter app but is extended by common
 - [Pinia](https://pinia.vuejs.org)
 - [Vue I18n](https://vue-i18n.intlify.dev)
 - [Sass](https://sass-lang.com)
-- linting and formatting before committing
+- Linting and formatting before committing
 
 ## Recommended IDE Setup
 
