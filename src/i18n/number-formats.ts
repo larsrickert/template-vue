@@ -5,7 +5,6 @@ const numberFormats: NumberFormats = {
     currency: {
       style: "currency",
       currency: "USD",
-      notation: "standard",
     },
   },
 };
