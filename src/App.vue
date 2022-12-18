@@ -9,5 +9,5 @@ import { RouterView } from "vue-router";
 </template>
 
 <style lang="scss">
-@import "@/styles/index.scss";
+@use "@/styles/index.scss";
 </style>
