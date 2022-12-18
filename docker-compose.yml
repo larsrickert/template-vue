@@ -3,7 +3,6 @@ version: "3"
 services:
   frontend:
     build: .
-    image: template-vue
     restart: unless-stopped
     ports:
       - "80:80"
