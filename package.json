@@ -1,6 +1,7 @@
 {
   "name": "template-vue",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.8.1",
+    "@semantic-release/git": "^10.0.1",
     "@types/jsdom": "^20.0.1",
     "@types/node": "^18.11.15",
     "@vitejs/plugin-vue": "^4.0.0",
@@ -43,5 +45,26 @@
   },
   "lint-staged": {
     "*.{vue,js,ts}": "eslint --cache --fix --ignore-path .gitignore"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
   }
 }

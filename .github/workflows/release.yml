@@ -1,14 +1,18 @@
-name: Check
+name: Semantic release
 on:
-  pull_request:
+  push:
+    branches: [main, next, beta, alpha]
+  workflow_dispatch:
 
 jobs:
-  check:
-    name: Check
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Git repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -16,9 +20,7 @@ jobs:
           cache: "npm"
       - name: 📦 Install dependencies
         run: npm ci
-      - name: 🔎 Lint
-        run: npm run lint
-      - name: 🚨 Run unit tests
-        run: npm run test:unit
-      - name: ⚒️ Build
-        run: npm run build
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
