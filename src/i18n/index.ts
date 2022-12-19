@@ -6,24 +6,24 @@ import type en from "./locales/en.json";
 import numberFormats from "./number-formats";
 
 // add type inference/autocompletion for translation keys
+type MessageSchema = typeof en;
+type DatetimeSchema = typeof dateTimeFormats["en"];
+type NumberSchema = typeof numberFormats["en"];
 declare module "vue-i18n" {
-  type MessageSchema = typeof en;
   export interface DefineLocaleMessage extends MessageSchema {
     [key: string]: unknown;
   }
-
-  type DatetimeSchema = typeof dateTimeFormats["en"];
   export interface DefineDateTimeFormat extends DatetimeSchema {
     [key: string]: unknown;
   }
-
-  type NumberSchema = typeof numberFormats["en"];
   export interface DefineNumberFormat extends NumberSchema {
     [key: string]: unknown;
   }
 }
 
 const i18n = createI18n({
+  legacy: false,
+  globalInjection: false,
   locale: "en",
   fallbackLocale: "en",
   messages,
