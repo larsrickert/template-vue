@@ -1,6 +1,6 @@
 import type { DateTimeFormats } from "@intlify/core-base";
 
-const dateTimeFormats: DateTimeFormats = {
+const dateTimeFormats = {
   en: {
     date: {
       year: "numeric",
@@ -15,6 +15,6 @@ const dateTimeFormats: DateTimeFormats = {
       minute: "2-digit",
     },
   },
-};
+} satisfies DateTimeFormats;
 
 export default dateTimeFormats;
