@@ -7,6 +7,7 @@ This template is based on the official vue starter app but is extended by common
 - [Sass](https://sass-lang.com)
 - [Semantic release](https://semantic-release.gitbook.io/semantic-release) for automated GitHub releases and changelogs.
 - Linting and formatting before committing
+- [pnpm](https://pnpm.io/), if you haven't installed pnpm, you can do so with `npm i -G pnpm`
 
 ## Recommended IDE Setup
 
@@ -17,31 +18,31 @@ This template is based on the official vue starter app but is extended by common
 ### Install dependencies
 
 ```sh
-npm ci
+pnpm install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-npm run build
+pnpm build
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-npm run test:unit
+pnpm test:unit
 ```
 
 ### Lint and fix file with [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
 
 ```sh
-npm run lint
+pnpm lint
 ```
 
 ## Type Support for `.vue` Imports in TS with VS Code
