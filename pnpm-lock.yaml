@@ -51,9 +51,6 @@ devDependencies:
   eslint-plugin-vue:
     specifier: ^9.9.0
     version: 9.9.0(eslint@8.34.0)
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
   jsdom:
     specifier: ^21.1.0
     version: 21.1.0
@@ -72,6 +69,9 @@ devDependencies:
   semantic-release:
     specifier: ^20.1.0
     version: 20.1.0
+  simple-git-hooks:
+    specifier: ^2.8.1
+    version: 2.8.1
   typescript:
     specifier: ~4.9.5
     version: 4.9.5
@@ -2622,12 +2622,6 @@ packages:
     engines: {node: '>=12.20.0'}
     dev: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
-
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
@@ -4351,6 +4345,12 @@ packages:
       chalk: 2.4.2
       figures: 2.0.0
       pkg-conf: 2.1.0
+    dev: true
+
+  /simple-git-hooks@2.8.1:
+    resolution: {integrity: sha512-DYpcVR1AGtSfFUNzlBdHrQGPsOhuuEJ/FkmPOOlFysP60AHd3nsEpkGq/QEOdtUyT1Qhk7w9oLmFoMG+75BDog==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /slash@3.0.0:
