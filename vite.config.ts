@@ -26,6 +26,5 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     passWithNoTests: true,
-    root: fileURLToPath(new URL("./", import.meta.url)),
   },
 });
