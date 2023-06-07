@@ -1,5 +1,5 @@
-@use "mixins";
-@use "@fontsource/open-sans/latin";
+@use "@fontsource/open-sans/latin" as *;
+@use "mixins" as *;
 
 body {
   margin: 0;
