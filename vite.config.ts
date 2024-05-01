@@ -12,10 +12,7 @@ export default defineConfig({
     vue(),
     VueI18nPlugin({
       compositionOnly: true,
-      include: resolve(
-        dirname(fileURLToPath(import.meta.url)),
-        "./src/i18n/locales/**",
-      ),
+      include: resolve(dirname(fileURLToPath(import.meta.url)), "./src/i18n/locales/**"),
     }),
   ],
   resolve: {
