@@ -1,4 +1,4 @@
-# Vue.js TypeScript Template 🚀
+# Vue.js Template 🚀
 
 This template is based on the official vue starter app but is extended by common libraries:
 
@@ -33,28 +33,23 @@ pnpm dev
 pnpm build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Run Unit Tests with [Vitest](https://vitest.dev)
 
 ```sh
 pnpm test:unit
 ```
 
-### Lint and fix file with [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
+### Lint and fix files with [ESLint](https://eslint.org)
 
 ```sh
-pnpm lint
+pnpm lint:fix
 ```
 
-## Type Support for `.vue` Imports in TS with VS Code
+### Format files with [Prettier](https://prettier.io)
 
-TypeScript cannot handle type information for `.vue` imports by default. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-But its recommended to use Volar's [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) because it is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Open VS Code extensions
-   2. Enter `@builtin typescript` in search box, find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload VS Code
+```sh
+pnpm format
+```
 
 ## Deploying for production with Docker
 
