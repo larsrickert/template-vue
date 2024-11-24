@@ -20,6 +20,16 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // opt-in to new sass modern compiler which will also become the default in Vite 6
+  // to prevent deprecation warnings
+  // see: https://vite.dev/config/shared-options.html#css-preprocessoroptions
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
+  },
   test: {
     environment: "jsdom",
     passWithNoTests: true,
