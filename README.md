@@ -23,31 +23,47 @@ pnpm install
 ### Compile and Hot-Reload for Development
 
 ```sh
-pnpm dev
+pnpm run dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-pnpm build
+pnpm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev)
+### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-pnpm test:unit
+pnpm run test:unit
+```
+
+### Run End-to-End Tests with [Playwright](https://playwright.dev)
+
+```sh
+# When testing on CI, must build the project first
+pnpm run build
+
+# Runs the end-to-end tests
+pnpm run test:e2e
+# Runs the tests only on Chromium
+pnpm run test:e2e -- --project=chromium
+# Runs the tests of a specific file
+pnpm run test:e2e -- tests/example.spec.ts
+# Runs the tests in debug mode
+pnpm run test:e2e -- --debug
 ```
 
 ### Lint and fix files with [ESLint](https://eslint.org)
 
 ```sh
-pnpm lint:fix
+pnpm run lint
 ```
 
 ### Format files with [Prettier](https://prettier.io)
 
 ```sh
-pnpm format
+pnpm run format
 ```
 
 ## Deploying for production with Docker
